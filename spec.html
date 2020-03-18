@@ -123,7 +123,7 @@
 
 <emu-clause id="sec-conformance">
   <h1>Conformance</h1>
-  <p>A conforming implementation of ECMAScript must provide and support all the types, values, objects, properties, functions, and program syntax and semantics described in this specification.</p>
+  <p>A conforming implementation of ECMAScript must provide and support all the types, values, objects, properties, functions, and program syntax and semantics described in this specification, except for the SharedArrayBuffer constructor as noted in <emu-xref href="#sec-sharedarraybuffer-constructor"></emu-xref>.</p>
   <p>A conforming implementation of ECMAScript must interpret source text input in conformance with the latest version of the Unicode Standard and ISO/IEC 10646.</p>
   <p>A conforming implementation of ECMAScript that provides an application programming interface (API) that supports programs that need to adapt to the linguistic and cultural conventions used by different human languages and countries must implement the interface defined by the most recent edition of ECMA-402 that is compatible with this specification.</p>
   <p>A conforming implementation of ECMAScript may provide additional types, values, objects, properties, and functions beyond those described in this specification. In particular, a conforming implementation of ECMAScript may provide properties not described in this specification, and values for those properties, for objects that are described in this specification.</p>
@@ -37138,6 +37138,8 @@ THH:mm:ss.sss
         <li>is not intended to be called as a function and will throw an exception when called in that manner.</li>
         <li>is designed to be subclassable. It may be used as the value of an `extends` clause of a class definition. Subclass constructors that intend to inherit the specified `SharedArrayBuffer` behaviour must include a `super` call to the `SharedArrayBuffer` constructor to create and initialize subclass instances with the internal state necessary to support the `SharedArrayBuffer.prototype` built-in methods.</li>
       </ul>
+
+      <p>Hosts are not required to provide the SharedArrayBuffer constructor if they do not provide concurrent access to SharedArrayBuffer objects, in which case the global object must not initially have a *"SharedArrayBuffer"* property.</p>
 
       <emu-note>
         <p>Unlike an `ArrayBuffer`, a `SharedArrayBuffer` cannot become detached, and its internal [[ArrayBufferData]] slot is never *null*.</p>
