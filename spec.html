@@ -1744,6 +1744,7 @@
 
         <emu-clause id="sec-numberbitwiseop" aoid="NumberBitwiseOp">
           <h1>NumberBitwiseOp ( _op_, _x_, _y_ )</h1>
+          <p>The abstract operation NumberBitwiseOp takes arguments _op_, _x_, and _y_. It performs the following steps:</p>
           <emu-alg>
             1. Let _lnum_ be ! ToInt32(_x_).
             1. Let _rnum_ be ! ToUint32(_y_).
@@ -1955,6 +1956,7 @@
 
         <emu-clause id="sec-binaryand" aoid="BinaryAnd">
           <h1>BinaryAnd ( _x_, _y_ )</h1>
+          <p>The abstract operation BinaryAnd takes arguments _x_ and _y_. It performs the following steps:</p>
           <emu-alg>
             1. Assert: _x_ is 0 or 1.
             1. Assert: _y_ is 0 or 1.
@@ -1965,6 +1967,7 @@
 
         <emu-clause id="sec-binaryor" aoid="BinaryOr">
           <h1>BinaryOr ( _x_, _y_ )</h1>
+          <p>The abstract operation BinaryOr takes arguments _x_ and _y_. It performs the following steps:</p>
           <emu-alg>
             1. Assert: _x_ is 0 or 1.
             1. Assert: _y_ is 0 or 1.
@@ -1975,6 +1978,7 @@
 
         <emu-clause id="sec-binaryxor" aoid="BinaryXor">
           <h1>BinaryXor ( _x_, _y_ )</h1>
+          <p>The abstract operation BinaryXor takes arguments _x_ and _y_. It performs the following steps:</p>
           <emu-alg>
             1. Assert: _x_ is 0 or 1.
             1. Assert: _y_ is 0 or 1.
@@ -1986,6 +1990,7 @@
 
         <emu-clause id="sec-bigintbitwiseop" aoid="BigIntBitwiseOp">
           <h1>BigIntBitwiseOp ( _op_, _x_, _y_ )</h1>
+          <p>The abstract operation BigIntBitwiseOp takes arguments _op_, _x_, and _y_. It performs the following steps:</p>
           <emu-alg>
             1. Assert: _op_ is *"&amp;"*, *"|"*, or *"^"*.
             1. Let _result_ be *0n*.
@@ -4127,6 +4132,7 @@
 
       <emu-clause id="sec-updateempty" aoid="UpdateEmpty">
         <h1>UpdateEmpty ( _completionRecord_, _value_ )</h1>
+        <p>The abstract operation UpdateEmpty takes arguments _completionRecord_ and _value_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: If _completionRecord_.[[Type]] is either ~return~ or ~throw~, then _completionRecord_.[[Value]] is not ~empty~.
           1. If _completionRecord_.[[Value]] is not ~empty~, return Completion(_completionRecord_).
@@ -4146,6 +4152,7 @@
 
       <emu-clause id="sec-getbase" aoid="GetBase" oldids="ao-getbase">
         <h1>GetBase ( _V_ )</h1>
+        <p>The abstract operation GetBase takes argument _V_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: Type(_V_) is Reference.
           1. Return the base value component of _V_.
@@ -4154,6 +4161,7 @@
 
       <emu-clause id="sec-getreferencedname" aoid="GetReferencedName" oldids="ao-getreferencedname">
         <h1>GetReferencedName ( _V_ )</h1>
+        <p>The abstract operation GetReferencedName takes argument _V_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: Type(_V_) is Reference.
           1. Return the referenced name component of _V_.
@@ -4162,6 +4170,7 @@
 
       <emu-clause id="sec-isstrictreference" aoid="IsStrictReference" oldids="ao-isstrictreference">
         <h1>IsStrictReference ( _V_ )</h1>
+        <p>The abstract operation IsStrictReference takes argument _V_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: Type(_V_) is Reference.
           1. Return the strict reference flag of _V_.
@@ -4170,6 +4179,7 @@
 
       <emu-clause id="sec-hasprimitivebase" aoid="HasPrimitiveBase" oldids="ao-hasprimitivebase">
         <h1>HasPrimitiveBase ( _V_ )</h1>
+        <p>The abstract operation HasPrimitiveBase takes argument _V_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: Type(_V_) is Reference.
           1. If Type(_V_'s base value component) is Boolean, String, Symbol, BigInt, or Number, return *true*; otherwise return *false*.
@@ -4178,6 +4188,7 @@
 
       <emu-clause id="sec-ispropertyreference" aoid="IsPropertyReference" oldids="ao-ispropertyreference">
         <h1>IsPropertyReference ( _V_ )</h1>
+        <p>The abstract operation IsPropertyReference takes argument _V_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: Type(_V_) is Reference.
           1. If either the base value component of _V_ is an Object or HasPrimitiveBase(_V_) is *true*, return *true*; otherwise return *false*.
@@ -4186,6 +4197,7 @@
 
       <emu-clause id="sec-isunresolvablereference" aoid="IsUnresolvableReference" oldids="ao-isunresolvablereference">
         <h1>IsUnresolvableReference ( _V_ )</h1>
+        <p>The abstract operation IsUnresolvableReference takes argument _V_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: Type(_V_) is Reference.
           1. If the base value component of _V_ is *undefined*, return *true*; otherwise return *false*.
@@ -4194,6 +4206,7 @@
 
       <emu-clause id="sec-issuperreference" aoid="IsSuperReference" oldids="ao-issuperreference">
         <h1>IsSuperReference ( _V_ )</h1>
+        <p>The abstract operation IsSuperReference takes argument _V_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: Type(_V_) is Reference.
           1. If _V_ has a thisValue component, return *true*; otherwise return *false*.
@@ -4202,6 +4215,7 @@
 
       <emu-clause id="sec-getvalue" aoid="GetValue">
         <h1>GetValue ( _V_ )</h1>
+        <p>The abstract operation GetValue takes argument _V_. It performs the following steps:</p>
         <emu-alg>
           1. ReturnIfAbrupt(_V_).
           1. If Type(_V_) is not Reference, return _V_.
@@ -4223,6 +4237,7 @@
 
       <emu-clause id="sec-putvalue" aoid="PutValue">
         <h1>PutValue ( _V_, _W_ )</h1>
+        <p>The abstract operation PutValue takes arguments _V_ and _W_. It performs the following steps:</p>
         <emu-alg>
           1. ReturnIfAbrupt(_V_).
           1. ReturnIfAbrupt(_W_).
@@ -4251,6 +4266,7 @@
 
       <emu-clause id="sec-getthisvalue" aoid="GetThisValue">
         <h1>GetThisValue ( _V_ )</h1>
+        <p>The abstract operation GetThisValue takes argument _V_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: IsPropertyReference(_V_) is *true*.
           1. If IsSuperReference(_V_) is *true*, then
@@ -4261,6 +4277,7 @@
 
       <emu-clause id="sec-initializereferencedbinding" aoid="InitializeReferencedBinding">
         <h1>InitializeReferencedBinding ( _V_, _W_ )</h1>
+        <p>The abstract operation InitializeReferencedBinding takes arguments _V_ and _W_. It performs the following steps:</p>
         <emu-alg>
           1. ReturnIfAbrupt(_V_).
           1. ReturnIfAbrupt(_W_).
@@ -4446,6 +4463,7 @@
 
       <emu-clause id="sec-copydatablockbytes" aoid="CopyDataBlockBytes">
         <h1>CopyDataBlockBytes ( _toBlock_, _toIndex_, _fromBlock_, _fromIndex_, _count_ )</h1>
+        <p>The abstract operation CopyDataBlockBytes takes arguments _toBlock_, _toIndex_, _fromBlock_, _fromIndex_, and _count_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: _fromBlock_ and _toBlock_ are distinct Data Block or Shared Data Block values.
           1. Assert: _fromIndex_, _toIndex_, and _count_ are integer values &ge; 0.
@@ -4514,6 +4532,7 @@
 
       <emu-clause id="sec-ordinarytoprimitive" aoid="OrdinaryToPrimitive">
         <h1>OrdinaryToPrimitive ( _O_, _hint_ )</h1>
+        <p>The abstract operation OrdinaryToPrimitive takes arguments _O_ and _hint_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: Type(_O_) is Object.
           1. Assert: Type(_hint_) is String and its value is either *"string"* or *"number"*.
@@ -5405,6 +5424,7 @@
 
     <emu-clause id="sec-isarray" aoid="IsArray">
       <h1>IsArray ( _argument_ )</h1>
+      <p>The abstract operation IsArray takes argument _argument_. It performs the following steps:</p>
       <emu-alg>
         1. If Type(_argument_) is not Object, return *false*.
         1. If _argument_ is an Array exotic object, return *true*.
@@ -5477,6 +5497,7 @@
 
     <emu-clause id="sec-isregexp" aoid="IsRegExp">
       <h1>IsRegExp ( _argument_ )</h1>
+      <p>The abstract operation IsRegExp takes argument _argument_. It performs the following steps:</p>
       <emu-alg>
         1. If Type(_argument_) is not Object, return *false*.
         1. Let _matcher_ be ? Get(_argument_, @@match).
@@ -5977,6 +5998,7 @@
 
     <emu-clause id="sec-getfunctionrealm" aoid="GetFunctionRealm">
       <h1>GetFunctionRealm ( _obj_ )</h1>
+      <p>The abstract operation GetFunctionRealm takes argument _obj_. It performs the following steps:</p>
       <emu-alg>
         1. Assert: ! IsCallable(_obj_) is *true*.
         1. If _obj_ has a [[Realm]] internal slot, then
@@ -5997,6 +6019,7 @@
 
     <emu-clause id="sec-copydataproperties" aoid="CopyDataProperties">
       <h1>CopyDataProperties ( _target_, _source_, _excludedItems_ )</h1>
+      <p>The abstract operation CopyDataProperties takes arguments _target_, _source_, and _excludedItems_. It performs the following steps:</p>
       <emu-alg>
         1. Assert: Type(_target_) is Object.
         1. Assert: _excludedItems_ is a List of property keys.
@@ -6028,6 +6051,7 @@
 
     <emu-clause id="sec-getiterator" aoid="GetIterator">
       <h1>GetIterator ( _obj_ [ , _hint_ [ , _method_ ] ] )</h1>
+      <p>The abstract operation GetIterator takes argument _obj_ and optional arguments _hint_ and _method_. It performs the following steps:</p>
       <emu-alg>
         1. If _hint_ is not present, set _hint_ to ~sync~.
         1. Assert: _hint_ is either ~sync~ or ~async~.
@@ -6049,6 +6073,7 @@
 
     <emu-clause id="sec-iteratornext" aoid="IteratorNext">
       <h1>IteratorNext ( _iteratorRecord_ [ , _value_ ] )</h1>
+      <p>The abstract operation IteratorNext takes argument _iteratorRecord_ and optional argument _value_. It performs the following steps:</p>
       <emu-alg>
         1. If _value_ is not present, then
           1. Let _result_ be ? Call(_iteratorRecord_.[[NextMethod]], _iteratorRecord_.[[Iterator]]).
@@ -6061,6 +6086,7 @@
 
     <emu-clause id="sec-iteratorcomplete" aoid="IteratorComplete">
       <h1>IteratorComplete ( _iterResult_ )</h1>
+      <p>The abstract operation IteratorComplete takes argument _iterResult_. It performs the following steps:</p>
       <emu-alg>
         1. Assert: Type(_iterResult_) is Object.
         1. Return ! ToBoolean(? Get(_iterResult_, *"done"*)).
@@ -6069,6 +6095,7 @@
 
     <emu-clause id="sec-iteratorvalue" aoid="IteratorValue">
       <h1>IteratorValue ( _iterResult_ )</h1>
+      <p>The abstract operation IteratorValue takes argument _iterResult_. It performs the following steps:</p>
       <emu-alg>
         1. Assert: Type(_iterResult_) is Object.
         1. Return ? Get(_iterResult_, *"value"*).
@@ -7212,6 +7239,7 @@
 
       <emu-clause id="sec-newfunctionenvironment" aoid="NewFunctionEnvironment">
         <h1>NewFunctionEnvironment ( _F_, _newTarget_ )</h1>
+        <p>The abstract operation NewFunctionEnvironment takes arguments _F_ and _newTarget_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: _F_ is an ECMAScript function.
           1. Assert: Type(_newTarget_) is Undefined or Object.
@@ -7231,6 +7259,7 @@
 
       <emu-clause id="sec-newglobalenvironment" aoid="NewGlobalEnvironment">
         <h1>NewGlobalEnvironment ( _G_, _thisValue_ )</h1>
+        <p>The abstract operation NewGlobalEnvironment takes arguments _G_ and _thisValue_. It performs the following steps:</p>
         <emu-alg>
           1. Let _env_ be a new Lexical Environment.
           1. Let _objRec_ be a new object Environment Record containing _G_ as the binding object.
@@ -7340,6 +7369,7 @@
 
     <emu-clause id="sec-createrealm" aoid="CreateRealm">
       <h1>CreateRealm ( )</h1>
+      <p>The abstract operation CreateRealm takes no arguments. It performs the following steps:</p>
       <emu-alg>
         1. Let _realmRec_ be a new Realm Record.
         1. Perform CreateIntrinsics(_realmRec_).
@@ -7352,6 +7382,7 @@
 
     <emu-clause id="sec-createintrinsics" aoid="CreateIntrinsics">
       <h1>CreateIntrinsics ( _realmRec_ )</h1>
+      <p>The abstract operation CreateIntrinsics takes argument _realmRec_. It performs the following steps:</p>
       <emu-alg>
         1. Let _intrinsics_ be a new Record.
         1. Set _realmRec_.[[Intrinsics]] to _intrinsics_.
@@ -7363,6 +7394,7 @@
 
     <emu-clause id="sec-setrealmglobalobject" aoid="SetRealmGlobalObject">
       <h1>SetRealmGlobalObject ( _realmRec_, _globalObj_, _thisValue_ )</h1>
+      <p>The abstract operation SetRealmGlobalObject takes arguments _realmRec_, _globalObj_, and _thisValue_. It performs the following steps:</p>
       <emu-alg>
         1. If _globalObj_ is *undefined*, then
           1. Let _intrinsics_ be _realmRec_.[[Intrinsics]].
@@ -7378,6 +7410,7 @@
 
     <emu-clause id="sec-setdefaultglobalbindings" aoid="SetDefaultGlobalBindings">
       <h1>SetDefaultGlobalBindings ( _realmRec_ )</h1>
+      <p>The abstract operation SetDefaultGlobalBindings takes argument _realmRec_. It performs the following steps:</p>
       <emu-alg>
         1. Let _global_ be _realmRec_.[[GlobalObject]].
         1. For each property of the Global Object specified in clause <emu-xref href="#sec-global-object"></emu-xref>, do
@@ -7612,6 +7645,7 @@
 
   <emu-clause id="sec-initializehostdefinedrealm" aoid="InitializeHostDefinedRealm">
     <h1>InitializeHostDefinedRealm ( )</h1>
+    <p>The abstract operation InitializeHostDefinedRealm takes no arguments. It performs the following steps:</p>
 
     <emu-alg>
       1. Let _realm_ be CreateRealm().
@@ -7703,6 +7737,7 @@
 
     <emu-clause id="sec-agentsignifier" aoid="AgentSignifier">
       <h1>AgentSignifier ( )</h1>
+      <p>The abstract operation AgentSignifier takes no arguments. It performs the following steps:</p>
       <emu-alg>
         1. Let _AR_ be the Agent Record of the surrounding agent.
         1. Return _AR_.[[Signifier]].
@@ -7711,6 +7746,7 @@
 
     <emu-clause id="sec-agentcansuspend" aoid="AgentCanSuspend">
       <h1>AgentCanSuspend ( )</h1>
+      <p>The abstract operation AgentCanSuspend takes no arguments. It performs the following steps:</p>
       <emu-alg>
         1. Let _AR_ be the Agent Record of the surrounding agent.
         1. Return _AR_.[[CanBlock]].
@@ -8497,6 +8533,7 @@
 
     <emu-clause id="sec-makeclassconstructor" aoid="MakeClassConstructor">
       <h1>MakeClassConstructor ( _F_ )</h1>
+      <p>The abstract operation MakeClassConstructor takes argument _F_. It performs the following steps:</p>
       <emu-alg>
         1. Assert: _F_ is an ECMAScript function object.
         1. Assert: _F_.[[IsClassConstructor]] is *false*.
@@ -9032,6 +9069,7 @@
 
       <emu-clause id="sec-stringgetownproperty" aoid="StringGetOwnProperty">
         <h1>StringGetOwnProperty ( _S_, _P_ )</h1>
+        <p>The abstract operation StringGetOwnProperty takes arguments _S_ and _P_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: _S_ is an Object that has a [[StringData]] internal slot.
           1. Assert: IsPropertyKey(_P_) is *true*.
@@ -9166,6 +9204,7 @@
 
       <emu-clause id="sec-createunmappedargumentsobject" aoid="CreateUnmappedArgumentsObject">
         <h1>CreateUnmappedArgumentsObject ( _argumentsList_ )</h1>
+        <p>The abstract operation CreateUnmappedArgumentsObject takes argument _argumentsList_. It performs the following steps:</p>
         <emu-alg>
           1. Let _len_ be the number of elements in _argumentsList_.
           1. Let _obj_ be OrdinaryObjectCreate(%Object.prototype%, &laquo; [[ParameterMap]] &raquo;).
@@ -9390,6 +9429,7 @@
 
       <emu-clause id="sec-isvalidintegerindex" aoid="IsValidIntegerIndex">
         <h1>IsValidIntegerIndex ( _O_, _index_ )</h1>
+        <p>The abstract operation IsValidIntegerIndex takes arguments _O_ and _index_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: _O_ is an Integer-Indexed exotic object.
           1. Assert: Type(_index_) is Number.
@@ -9402,6 +9442,7 @@
 
       <emu-clause id="sec-integerindexedelementget" aoid="IntegerIndexedElementGet">
         <h1>IntegerIndexedElementGet ( _O_, _index_ )</h1>
+        <p>The abstract operation IntegerIndexedElementGet takes arguments _O_ and _index_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: _O_ is an Integer-Indexed exotic object.
           1. Assert: Type(_index_) is Number.
@@ -9419,6 +9460,7 @@
 
       <emu-clause id="sec-integerindexedelementset" aoid="IntegerIndexedElementSet">
         <h1>IntegerIndexedElementSet ( _O_, _index_, _value_ )</h1>
+        <p>The abstract operation IntegerIndexedElementSet takes arguments _O_, _index_, and _value_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: _O_ is an Integer-Indexed exotic object.
           1. Assert: Type(_index_) is Number.
@@ -9657,6 +9699,7 @@
 
       <emu-clause id="sec-set-immutable-prototype" aoid="SetImmutablePrototype">
         <h1>SetImmutablePrototype ( _O_, _V_ )</h1>
+        <p>The abstract operation SetImmutablePrototype takes arguments _O_ and _V_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: Either Type(_V_) is Object or Type(_V_) is Null.
           1. Let _current_ be ? _O_.[[GetPrototypeOf]]().
@@ -12361,6 +12404,7 @@
 
       <emu-clause id="sec-initializeboundname" aoid="InitializeBoundName">
         <h1>Runtime Semantics: InitializeBoundName ( _name_, _value_, _environment_ )</h1>
+        <p>The abstract operation InitializeBoundName takes arguments _name_, _value_, and _environment_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: Type(_name_) is String.
           1. If _environment_ is not *undefined*, then
@@ -13723,6 +13767,7 @@
 
         <emu-clause id="sec-evaluatenew" aoid="EvaluateNew">
           <h1>Runtime Semantics: EvaluateNew ( _constructExpr_, _arguments_ )</h1>
+          <p>The abstract operation EvaluateNew takes arguments _constructExpr_ and _arguments_. It performs the following steps:</p>
           <emu-alg>
             1. Assert: _constructExpr_ is either a |NewExpression| or a |MemberExpression|.
             1. Assert: _arguments_ is either ~empty~ or an |Arguments|.
@@ -13836,6 +13881,7 @@
 
       <emu-clause id="sec-getsuperconstructor" aoid="GetSuperConstructor">
         <h1>Runtime Semantics: GetSuperConstructor ( )</h1>
+        <p>The abstract operation GetSuperConstructor takes no arguments. It performs the following steps:</p>
         <emu-alg>
           1. Let _envRec_ be GetThisEnvironment().
           1. Assert: _envRec_ is a function Environment Record.
@@ -13848,6 +13894,7 @@
 
       <emu-clause id="sec-makesuperpropertyreference" aoid="MakeSuperPropertyReference">
         <h1>Runtime Semantics: MakeSuperPropertyReference ( _actualThis_, _propertyKey_, _strict_ )</h1>
+        <p>The abstract operation MakeSuperPropertyReference takes arguments _actualThis_, _propertyKey_, and _strict_. It performs the following steps:</p>
         <emu-alg>
           1. Let _env_ be GetThisEnvironment().
           1. Assert: _env_.HasSuperBinding() is *true*.
@@ -17259,6 +17306,7 @@
 
       <emu-clause id="sec-loopcontinues" aoid="LoopContinues">
         <h1>Runtime Semantics: LoopContinues ( _completion_, _labelSet_ )</h1>
+        <p>The abstract operation LoopContinues takes arguments _completion_ and _labelSet_. It performs the following steps:</p>
         <emu-alg>
           1. If _completion_.[[Type]] is ~normal~, return *true*.
           1. If _completion_.[[Type]] is not ~continue~, return *false*.
@@ -17549,6 +17597,7 @@
 
       <emu-clause id="sec-forbodyevaluation" aoid="ForBodyEvaluation">
         <h1>Runtime Semantics: ForBodyEvaluation ( _test_, _increment_, _stmt_, _perIterationBindings_, _labelSet_ )</h1>
+        <p>The abstract operation ForBodyEvaluation takes arguments _test_, _increment_, _stmt_, _perIterationBindings_, and _labelSet_. It performs the following steps:</p>
         <emu-alg>
           1. Let _V_ be *undefined*.
           1. Perform ? CreatePerIterationEnvironment(_perIterationBindings_).
@@ -17569,6 +17618,7 @@
 
       <emu-clause id="sec-createperiterationenvironment" aoid="CreatePerIterationEnvironment">
         <h1>Runtime Semantics: CreatePerIterationEnvironment ( _perIterationBindings_ )</h1>
+        <p>The abstract operation CreatePerIterationEnvironment takes argument _perIterationBindings_. It performs the following steps:</p>
         <emu-alg>
           1. If _perIterationBindings_ has any elements, then
             1. Let _lastIterationEnv_ be the running execution context's LexicalEnvironment.
@@ -17992,6 +18042,7 @@
 
       <emu-clause id="sec-enumerate-object-properties" aoid="EnumerateObjectProperties">
         <h1>EnumerateObjectProperties ( _O_ )</h1>
+        <p>The abstract operation EnumerateObjectProperties takes argument _O_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: Type(_O_) is Object.
           1. Return an Iterator object (<emu-xref href="#sec-iterator-interface"></emu-xref>) whose `next` method iterates over all the String-valued keys of enumerable properties of _O_. The iterator object is never directly accessible to ECMAScript code. The mechanics and order of enumerating the properties is not specified but must conform to the rules specified below.
@@ -18856,6 +18907,7 @@
 
     <emu-clause id="sec-islabelledfunction" aoid="IsLabelledFunction">
       <h1>Static Semantics: IsLabelledFunction ( _stmt_ )</h1>
+      <p>The abstract operation IsLabelledFunction takes argument _stmt_. It performs the following steps:</p>
       <emu-alg>
         1. If _stmt_ is not a |LabelledStatement|, return *false*.
         1. Let _item_ be the |LabelledItem| of _stmt_.
@@ -21847,6 +21899,7 @@
 
     <emu-clause id="sec-isintailposition" aoid="IsInTailPosition">
       <h1>Static Semantics: IsInTailPosition ( _call_ )</h1>
+      <p>The abstract operation IsInTailPosition takes argument _call_. It performs the following steps:</p>
       <emu-alg>
         1. Assert: _call_ is a Parse Node.
         1. If the source code matching _call_ is non-strict code, return *false*.
@@ -22177,6 +22230,7 @@
 
     <emu-clause id="sec-preparefortailcall" aoid="PrepareForTailCall">
       <h1>Runtime Semantics: PrepareForTailCall ( )</h1>
+      <p>The abstract operation PrepareForTailCall takes no arguments. It performs the following steps:</p>
       <emu-alg>
         1. Let _leafContext_ be the running execution context.
         1. Suspend _leafContext_.
@@ -22379,6 +22433,7 @@
 
     <emu-clause id="sec-runtime-semantics-scriptevaluation" aoid="ScriptEvaluation">
       <h1>ScriptEvaluation ( _scriptRecord_ )</h1>
+      <p>The abstract operation ScriptEvaluation takes argument _scriptRecord_. It performs the following steps:</p>
 
       <emu-alg>
         1. Let _globalEnv_ be _scriptRecord_.[[Realm]].[[GlobalEnv]].
@@ -24797,6 +24852,7 @@
 
       <emu-clause id="sec-performeval" aoid="PerformEval" oldids="sec-performeval-rules-outside-functions,sec-performeval-rules-outside-methods,sec-performeval-rules-outside-constructors">
         <h1>Runtime Semantics: PerformEval ( _x_, _callerRealm_, _strictCaller_, _direct_ )</h1>
+        <p>The abstract operation PerformEval takes arguments _x_, _callerRealm_, _strictCaller_, and _direct_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: If _direct_ is *false*, then _strictCaller_ is also *false*.
           1. If Type(_x_) is not String, return _x_.
@@ -24862,6 +24918,7 @@
 
       <emu-clause id="sec-evaldeclarationinstantiation" aoid="EvalDeclarationInstantiation">
         <h1>Runtime Semantics: EvalDeclarationInstantiation ( _body_, _varEnv_, _lexEnv_, _strict_ )</h1>
+        <p>The abstract operation EvalDeclarationInstantiation takes arguments _body_, _varEnv_, _lexEnv_, and _strict_. It performs the following steps:</p>
         <!--
           WARNING: If you add, remove, rename, or repurpose any variable names
                    within this algorithm, you may need to update
@@ -25680,6 +25737,7 @@
 
         <emu-clause id="sec-objectdefineproperties" aoid="ObjectDefineProperties">
           <h1>Runtime Semantics: ObjectDefineProperties ( _O_, _Properties_ )</h1>
+          <p>The abstract operation ObjectDefineProperties takes arguments _O_ and _Properties_. It performs the following steps:</p>
           <emu-alg>
             1. If Type(_O_) is not Object, throw a *TypeError* exception.
             1. Let _props_ be ? ToObject(_Properties_).
@@ -26414,6 +26472,7 @@
         <li>has a [[Prototype]] internal slot whose value is %Object.prototype%.</li>
       </ul>
 
+      <p>The abstract operation <dfn id="sec-thisbooleanvalue" aoid="thisBooleanValue">thisBooleanValue</dfn> takes argument _value_. It performs the following steps:</p>
       <emu-alg>
         1. If Type(_value_) is Boolean, return _value_.
         1. If Type(_value_) is Object and _value_ has a [[BooleanData]] internal slot, then
@@ -26648,6 +26707,7 @@
         <li>has a [[Prototype]] internal slot whose value is %Object.prototype%.</li>
       </ul>
 
+      <p>The abstract operation <dfn id="sec-thissymbolvalue" aoid="thisSymbolValue">thisSymbolValue</dfn> takes argument _value_. It performs the following steps:</p>
       <emu-alg>
         1. If Type(_value_) is Symbol, return _value_.
         1. If Type(_value_) is Object and _value_ has a [[SymbolData]] internal slot, then
@@ -26682,6 +26742,7 @@
 
         <emu-clause id="sec-symboldescriptivestring" aoid="SymbolDescriptiveString">
           <h1>Runtime Semantics: SymbolDescriptiveString ( _sym_ )</h1>
+          <p>The abstract operation SymbolDescriptiveString takes argument _sym_. It performs the following steps:</p>
           <emu-alg>
             1. Assert: Type(_sym_) is Symbol.
             1. Let _desc_ be _sym_'s [[Description]] value.
@@ -27094,6 +27155,7 @@
         <li>has a [[Prototype]] internal slot whose value is %Object.prototype%.</li>
       </ul>
       <p>Unless explicitly stated otherwise, the methods of the Number prototype object defined below are not generic and the *this* value passed to them must be either a Number value or an object that has a [[NumberData]] internal slot that has been initialized to a Number value.</p>
+      <p>The abstract operation <dfn id="sec-thisnumbervalue" aoid="thisNumberValue">thisNumberValue</dfn> takes argument _value_. It performs the following steps:</p>
       <emu-alg>
         1. If Type(_value_) is Number, return _value_.
         1. If Type(_value_) is Object and _value_ has a [[NumberData]] internal slot, then
@@ -27302,6 +27364,7 @@
 
         <emu-clause id="sec-numbertobigint" aoid="NumberToBigInt">
           <h1>Runtime Semantics: NumberToBigInt ( _number_ )</h1>
+          <p>The abstract operation NumberToBigInt takes argument _number_. It performs the following steps:</p>
           <emu-alg>
             1. Assert: Type(_number_) is Number.
             1. If IsInteger(_number_) is *false*, throw a *RangeError* exception.
@@ -27352,6 +27415,7 @@
         <li>has a [[Prototype]] internal slot whose value is the intrinsic object %Object.prototype%.</li>
       </ul>
 
+      <p>The abstract operation <dfn id="sec-thisbigintvalue" aoid="thisBigIntValue">thisBigIntValue</dfn> takes argument _value_. It performs the following steps:</p>
       <emu-alg>
         1. If Type(_value_) is BigInt, return _value_.
         1. If Type(_value_) is Object and _value_ has a [[BigIntData]] internal slot, then
@@ -28822,6 +28886,7 @@ THH:mm:ss.sss
         <li>has a [[Prototype]] internal slot whose value is %Object.prototype%.</li>
       </ul>
       <p>Unless explicitly defined otherwise, the methods of the Date prototype object defined below are not generic and the *this* value passed to them must be an object that has a [[DateValue]] internal slot that has been initialized to a time value.</p>
+      <p>The abstract operation <dfn id="sec-thistimevalue" aoid="thisTimeValue">thisTimeValue</dfn> takes argument _value_. It performs the following steps:</p>
       <emu-alg>
         1. If Type(_value_) is Object and _value_ has a [[DateValue]] internal slot, then
           1. Return _value_.[[DateValue]].
@@ -29346,6 +29411,7 @@ THH:mm:ss.sss
 
         <emu-clause id="sec-timestring" aoid="TimeString">
           <h1>Runtime Semantics: TimeString ( _tv_ )</h1>
+          <p>The abstract operation TimeString takes argument _tv_. It performs the following steps:</p>
           <emu-alg>
             1. Assert: Type(_tv_) is Number.
             1. Assert: _tv_ is not *NaN*.
@@ -29358,6 +29424,7 @@ THH:mm:ss.sss
 
         <emu-clause id="sec-datestring" aoid="DateString">
           <h1>Runtime Semantics: DateString ( _tv_ )</h1>
+          <p>The abstract operation DateString takes argument _tv_. It performs the following steps:</p>
           <emu-alg>
             1. Assert: Type(_tv_) is Number.
             1. Assert: _tv_ is not *NaN*.
@@ -29554,6 +29621,7 @@ THH:mm:ss.sss
 
         <emu-clause id="sec-timezoneestring" aoid="TimeZoneString">
           <h1>Runtime Semantics: TimeZoneString ( _tv_ )</h1>
+          <p>The abstract operation TimeZoneString takes argument _tv_. It performs the following steps:</p>
           <emu-alg>
             1. Assert: Type(_tv_) is Number.
             1. Assert: _tv_ is not *NaN*.
@@ -29568,6 +29636,7 @@ THH:mm:ss.sss
 
         <emu-clause id="sec-todatestring" aoid="ToDateString">
           <h1>Runtime Semantics: ToDateString ( _tv_ )</h1>
+          <p>The abstract operation ToDateString takes argument _tv_. It performs the following steps:</p>
           <emu-alg>
             1. Assert: Type(_tv_) is Number.
             1. If _tv_ is *NaN*, return *"Invalid Date"*.
@@ -29765,6 +29834,7 @@ THH:mm:ss.sss
         <li>has a [[Prototype]] internal slot whose value is %Object.prototype%.</li>
       </ul>
       <p>Unless explicitly stated otherwise, the methods of the String prototype object defined below are not generic and the *this* value passed to them must be either a String value or an object that has a [[StringData]] internal slot that has been initialized to a String value.</p>
+      <p>The abstract operation <dfn id="sec-thisstringvalue" aoid="thisStringValue">thisStringValue</dfn> takes argument _value_. It performs the following steps:</p>
       <emu-alg>
         1. If Type(_value_) is String, return _value_.
         1. If Type(_value_) is Object and _value_ has a [[StringData]] internal slot, then
@@ -30064,6 +30134,7 @@ THH:mm:ss.sss
 
         <emu-clause id="sec-stringpad" aoid="StringPad">
           <h1>Runtime Semantics: StringPad ( _O_, _maxLength_, _fillString_, _placement_ )</h1>
+          <p>The abstract operation StringPad takes arguments _O_, _maxLength_, _fillString_, and _placement_. It performs the following steps:</p>
           <emu-alg>
             1. Assert: _placement_ is ~start~ or ~end~.
             1. Let _S_ be ? ToString(_O_).
@@ -30138,6 +30209,7 @@ THH:mm:ss.sss
 
         <emu-clause id="sec-getsubstitution" aoid="GetSubstitution">
           <h1>Runtime Semantics: GetSubstitution ( _matched_, _str_, _position_, _captures_, _namedCaptures_, _replacement_ )</h1>
+          <p>The abstract operation GetSubstitution takes arguments _matched_, _str_, _position_, _captures_, _namedCaptures_, and _replacement_. It performs the following steps:</p>
           <emu-alg>
             1. Assert: Type(_matched_) is String.
             1. Let _matchLength_ be the number of code units in _matched_.
@@ -31579,6 +31651,7 @@ THH:mm:ss.sss
 
         <emu-clause id="sec-runtime-semantics-wordcharacters-abstract-operation" aoid="WordCharacters">
           <h1>Runtime Semantics: WordCharacters ( )</h1>
+          <p>The abstract operation WordCharacters takes no arguments. It performs the following steps:</p>
           <emu-alg>
             1. Let _A_ be a set of characters containing the sixty-three characters:
             <figure>
@@ -32361,6 +32434,7 @@ THH:mm:ss.sss
 
         <emu-clause id="sec-regexpalloc" aoid="RegExpAlloc">
           <h1>Runtime Semantics: RegExpAlloc ( _newTarget_ )</h1>
+          <p>The abstract operation RegExpAlloc takes argument _newTarget_. It performs the following steps:</p>
           <emu-alg>
             1. Let _obj_ be ? OrdinaryCreateFromConstructor(_newTarget_, *"%RegExp.prototype%"*, &laquo; [[RegExpMatcher]], [[OriginalSource]], [[OriginalFlags]] &raquo;).
             1. Perform ! DefinePropertyOrThrow(_obj_, *"lastIndex"*, PropertyDescriptor { [[Writable]]: *true*, [[Enumerable]]: *false*, [[Configurable]]: *false* }).
@@ -32370,6 +32444,7 @@ THH:mm:ss.sss
 
         <emu-clause id="sec-regexpinitialize" aoid="RegExpInitialize">
           <h1>Runtime Semantics: RegExpInitialize ( _obj_, _pattern_, _flags_ )</h1>
+          <p>The abstract operation RegExpInitialize takes arguments _obj_, _pattern_, and _flags_. It performs the following steps:</p>
           <emu-alg>
             1. If _pattern_ is *undefined*, let _P_ be the empty String.
             1. Else, let _P_ be ? ToString(_pattern_).
@@ -32395,6 +32470,7 @@ THH:mm:ss.sss
 
         <emu-clause id="sec-regexpcreate" aoid="RegExpCreate">
           <h1>Runtime Semantics: RegExpCreate ( _P_, _F_ )</h1>
+          <p>The abstract operation RegExpCreate takes arguments _P_ and _F_. It performs the following steps:</p>
           <emu-alg>
             1. Let _obj_ be ? RegExpAlloc(%RegExp%).
             1. Return ? RegExpInitialize(_obj_, _P_, _F_).
@@ -32403,6 +32479,7 @@ THH:mm:ss.sss
 
         <emu-clause id="sec-escaperegexppattern" aoid="EscapeRegExpPattern">
           <h1>Runtime Semantics: EscapeRegExpPattern ( _P_, _F_ )</h1>
+          <p>The abstract operation EscapeRegExpPattern takes arguments _P_ and _F_. It performs the following steps:</p>
           <emu-alg>
             1. Let _S_ be a String in the form of a |Pattern[~U]| (|Pattern[+U]| if _F_ contains *"u"*) equivalent to _P_ interpreted as UTF-16 encoded Unicode code points (<emu-xref href="#sec-ecmascript-language-types-string-type"></emu-xref>), in which certain code points are escaped as described below. _S_ may or may not be identical to _P_; however, the abstract closure that would result from evaluating _S_ as a |Pattern[~U]| (|Pattern[+U]| if _F_ contains *"u"*) must behave identically to the abstract closure given by the constructed object's [[RegExpMatcher]] internal slot. Multiple calls to this abstract operation using the same values for _P_ and _F_ must produce identical results.
             1. The code points `/` or any |LineTerminator| occurring in the pattern shall be escaped in _S_ as necessary to ensure that the string-concatenation of *"/"*, _S_, *"/"*, and _F_ can be parsed (in an appropriate lexical context) as a |RegularExpressionLiteral| that behaves identically to the constructed regular expression. For example, if _P_ is *"/"*, then _S_ could be *"\\/"* or *"\\u002F"*, among other possibilities, but not *"/"*, because `///` followed by _F_ would be parsed as a |SingleLineComment| rather than a |RegularExpressionLiteral|. If _P_ is the empty String, this specification can be met by letting _S_ be *"(?:)"*.
@@ -32470,6 +32547,7 @@ THH:mm:ss.sss
 
         <emu-clause id="sec-regexpexec" aoid="RegExpExec">
           <h1>Runtime Semantics: RegExpExec ( _R_, _S_ )</h1>
+          <p>The abstract operation RegExpExec takes arguments _R_ and _S_. It performs the following steps:</p>
           <emu-alg>
             1. Assert: Type(_R_) is Object.
             1. Assert: Type(_S_) is String.
@@ -32488,6 +32566,7 @@ THH:mm:ss.sss
 
         <emu-clause id="sec-regexpbuiltinexec" aoid="RegExpBuiltinExec">
           <h1>Runtime Semantics: RegExpBuiltinExec ( _R_, _S_ )</h1>
+          <p>The abstract operation RegExpBuiltinExec takes arguments _R_ and _S_. It performs the following steps:</p>
           <emu-alg>
             1. Assert: _R_ is an initialized RegExp instance.
             1. Assert: Type(_S_) is String.
@@ -32553,6 +32632,7 @@ THH:mm:ss.sss
 
         <emu-clause id="sec-advancestringindex" aoid="AdvanceStringIndex">
           <h1>AdvanceStringIndex ( _S_, _index_, _unicode_ )</h1>
+          <p>The abstract operation AdvanceStringIndex takes arguments _S_, _index_, and _unicode_. It performs the following steps:</p>
           <emu-alg>
             1. Assert: Type(_S_) is String.
             1. Assert: 0 &le; _index_ &le; 2<sup>53</sup> - 1 and ! IsInteger(_index_) is *true*.
@@ -33314,6 +33394,7 @@ THH:mm:ss.sss
 
         <emu-clause id="sec-isconcatspreadable" aoid="IsConcatSpreadable">
           <h1>Runtime Semantics: IsConcatSpreadable ( _O_ )</h1>
+          <p>The abstract operation IsConcatSpreadable takes argument _O_. It performs the following steps:</p>
           <emu-alg>
             1. If Type(_O_) is not Object, return *false*.
             1. Let _spreadable_ be ? Get(_O_, @@isConcatSpreadable).
@@ -33543,6 +33624,7 @@ THH:mm:ss.sss
 
         <emu-clause id="sec-flattenintoarray" aoid="FlattenIntoArray">
           <h1>FlattenIntoArray ( _target_, _source_, _sourceLen_, _start_, _depth_ [ , _mapperFunction_, _thisArg_ ] )</h1>
+          <p>The abstract operation FlattenIntoArray takes arguments _target_, _source_, _sourceLen_, _start_, and _depth_ and optional arguments _mapperFunction_ and _thisArg_. It performs the following steps:</p>
           <emu-alg>
             1. Assert: Type(_target_) is Object.
             1. Assert: Type(_source_) is Object.
@@ -34831,6 +34913,7 @@ THH:mm:ss.sss
 
         <emu-clause id="sec-iterabletolist" aoid="IterableToList">
           <h1>Runtime Semantics: IterableToList ( _items_, _method_ )</h1>
+          <p>The abstract operation IterableToList takes arguments _items_ and _method_. It performs the following steps:</p>
           <emu-alg>
             1. Let _iteratorRecord_ be ? GetIterator(_items_, ~sync~, _method_).
             1. Let _values_ be a new empty List.
@@ -34982,6 +35065,7 @@ THH:mm:ss.sss
 
         <emu-clause id="sec-validatetypedarray" aoid="ValidateTypedArray">
           <h1>Runtime Semantics: ValidateTypedArray ( _O_ )</h1>
+          <p>The abstract operation ValidateTypedArray takes argument _O_. It performs the following steps:</p>
           <emu-alg>
             1. Perform ? RequireInternalSlot(_O_, [[TypedArrayName]]).
             1. Assert: _O_ has a [[ViewedArrayBuffer]] internal slot.
@@ -36693,6 +36777,7 @@ THH:mm:ss.sss
 
       <emu-clause id="sec-isdetachedbuffer" aoid="IsDetachedBuffer">
         <h1>IsDetachedBuffer ( _arrayBuffer_ )</h1>
+        <p>The abstract operation IsDetachedBuffer takes argument _arrayBuffer_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: Type(_arrayBuffer_) is Object and it has an [[ArrayBufferData]] internal slot.
           1. If _arrayBuffer_.[[ArrayBufferData]] is *null*, return *true*.
@@ -36702,6 +36787,7 @@ THH:mm:ss.sss
 
       <emu-clause id="sec-detacharraybuffer" aoid="DetachArrayBuffer">
         <h1>DetachArrayBuffer ( _arrayBuffer_ [ , _key_ ] )</h1>
+        <p>The abstract operation DetachArrayBuffer takes argument _arrayBuffer_ and optional argument _key_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: Type(_arrayBuffer_) is Object and it has [[ArrayBufferData]], [[ArrayBufferByteLength]], and [[ArrayBufferDetachKey]] internal slots.
           1. Assert: IsSharedArrayBuffer(_arrayBuffer_) is *false*.
@@ -36760,6 +36846,7 @@ THH:mm:ss.sss
 
       <emu-clause id="sec-isnotearconfiguration" aoid="IsNoTearConfiguration">
         <h1>IsNoTearConfiguration ( _type_, _order_ )</h1>
+        <p>The abstract operation IsNoTearConfiguration takes arguments _type_ and _order_. It performs the following steps:</p>
         <emu-alg>
           1. If ! IsUnclampedIntegerElementType(_type_) is *true*, return *true*.
           1. If ! IsBigIntElementType(_type_) is *true* and _order_ is not ~Init~ or ~Unordered~, return *true*.
@@ -37570,6 +37657,7 @@ THH:mm:ss.sss
 
       <emu-clause id="sec-validateatomicaccess" aoid="ValidateAtomicAccess">
         <h1>ValidateAtomicAccess ( _typedArray_, _requestIndex_ )</h1>
+        <p>The abstract operation ValidateAtomicAccess takes arguments _typedArray_ and _requestIndex_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: _typedArray_ is an Object that has a [[ViewedArrayBuffer]] internal slot.
           1. Let _accessIndex_ be ? ToIndex(_requestIndex_).
@@ -38081,6 +38169,7 @@ THH:mm:ss.sss
 
       <emu-clause id="sec-serializejsonproperty" aoid="SerializeJSONProperty">
         <h1>Runtime Semantics: SerializeJSONProperty ( _state_, _key_, _holder_ )</h1>
+        <p>The abstract operation SerializeJSONProperty takes arguments _state_, _key_, and _holder_. It performs the following steps:</p>
         <emu-alg>
           1. Let _value_ be ? Get(_holder_, _key_).
           1. If Type(_value_) is Object or BigInt, then
@@ -38742,6 +38831,7 @@ THH:mm:ss.sss
 
       <emu-clause id="sec-asyncfromsynciteratorcontinuation" aoid="AsyncFromSyncIteratorContinuation">
         <h1>AsyncFromSyncIteratorContinuation ( _result_, _promiseCapability_ )</h1>
+        <p>The abstract operation AsyncFromSyncIteratorContinuation takes arguments _result_ and _promiseCapability_. It performs the following steps:</p>
 
         <emu-alg>
           1. Let _done_ be IteratorComplete(_result_).
@@ -39075,6 +39165,7 @@ THH:mm:ss.sss
 
       <emu-clause id="sec-generatorstart" aoid="GeneratorStart">
         <h1>GeneratorStart ( _generator_, _generatorBody_ )</h1>
+        <p>The abstract operation GeneratorStart takes arguments _generator_ and _generatorBody_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: The value of _generator_.[[GeneratorState]] is *undefined*.
           1. Let _genContext_ be the running execution context.
@@ -39099,6 +39190,7 @@ THH:mm:ss.sss
 
       <emu-clause id="sec-generatorvalidate" aoid="GeneratorValidate">
         <h1>GeneratorValidate ( _generator_ )</h1>
+        <p>The abstract operation GeneratorValidate takes argument _generator_. It performs the following steps:</p>
         <emu-alg>
           1. Perform ? RequireInternalSlot(_generator_, [[GeneratorState]]).
           1. Assert: _generator_ also has a [[GeneratorContext]] internal slot.
@@ -39110,6 +39202,7 @@ THH:mm:ss.sss
 
       <emu-clause id="sec-generatorresume" aoid="GeneratorResume">
         <h1>GeneratorResume ( _generator_, _value_ )</h1>
+        <p>The abstract operation GeneratorResume takes arguments _generator_ and _value_. It performs the following steps:</p>
         <emu-alg>
           1. Let _state_ be ? GeneratorValidate(_generator_).
           1. If _state_ is ~completed~, return CreateIterResultObject(*undefined*, *true*).
@@ -39127,6 +39220,7 @@ THH:mm:ss.sss
 
       <emu-clause id="sec-generatorresumeabrupt" aoid="GeneratorResumeAbrupt">
         <h1>GeneratorResumeAbrupt ( _generator_, _abruptCompletion_ )</h1>
+        <p>The abstract operation GeneratorResumeAbrupt takes arguments _generator_ and _abruptCompletion_. It performs the following steps:</p>
         <emu-alg>
           1. Let _state_ be ? GeneratorValidate(_generator_).
           1. If _state_ is ~suspendedStart~, then
@@ -39151,6 +39245,7 @@ THH:mm:ss.sss
 
       <emu-clause id="sec-getgeneratorkind" aoid="GetGeneratorKind">
         <h1>GetGeneratorKind ( )</h1>
+        <p>The abstract operation GetGeneratorKind takes no arguments. It performs the following steps:</p>
         <emu-alg>
           1. Let _genContext_ be the running execution context.
           1. If _genContext_ does not have a Generator component, return ~non-generator~.
@@ -39162,6 +39257,7 @@ THH:mm:ss.sss
 
       <emu-clause id="sec-generatoryield" aoid="GeneratorYield">
         <h1>GeneratorYield ( _iterNextObj_ )</h1>
+        <p>The abstract operation GeneratorYield takes argument _iterNextObj_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: _iterNextObj_ is an Object that implements the <i>IteratorResult</i> interface.
           1. Let _genContext_ be the running execution context.
@@ -39297,6 +39393,7 @@ THH:mm:ss.sss
 
       <emu-clause id="sec-asyncgeneratorstart" aoid="AsyncGeneratorStart">
         <h1>AsyncGeneratorStart ( _generator_, _generatorBody_ )</h1>
+        <p>The abstract operation AsyncGeneratorStart takes arguments _generator_ and _generatorBody_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: _generator_ is an AsyncGenerator instance.
           1. Assert: _generator_.[[AsyncGeneratorState]] is *undefined*.
@@ -39322,6 +39419,7 @@ THH:mm:ss.sss
 
       <emu-clause id="sec-asyncgeneratorresolve" aoid="AsyncGeneratorResolve">
         <h1>AsyncGeneratorResolve ( _generator_, _value_, _done_ )</h1>
+        <p>The abstract operation AsyncGeneratorResolve takes arguments _generator_, _value_, and _done_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: _generator_ is an AsyncGenerator instance.
           1. Let _queue_ be _generator_.[[AsyncGeneratorQueue]].
@@ -39337,6 +39435,7 @@ THH:mm:ss.sss
 
       <emu-clause id="sec-asyncgeneratorreject" aoid="AsyncGeneratorReject">
         <h1>AsyncGeneratorReject ( _generator_, _exception_ )</h1>
+        <p>The abstract operation AsyncGeneratorReject takes arguments _generator_ and _exception_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: _generator_ is an AsyncGenerator instance.
           1. Let _queue_ be _generator_.[[AsyncGeneratorQueue]].
@@ -39351,6 +39450,7 @@ THH:mm:ss.sss
 
       <emu-clause id="sec-asyncgeneratorresumenext" aoid="AsyncGeneratorResumeNext">
         <h1>AsyncGeneratorResumeNext ( _generator_ )</h1>
+        <p>The abstract operation AsyncGeneratorResumeNext takes argument _generator_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: _generator_ is an AsyncGenerator instance.
           1. Let _state_ be _generator_.[[AsyncGeneratorState]].
@@ -39427,6 +39527,7 @@ THH:mm:ss.sss
 
       <emu-clause id="sec-asyncgeneratorenqueue" aoid="AsyncGeneratorEnqueue">
         <h1>AsyncGeneratorEnqueue ( _generator_, _completion_ )</h1>
+        <p>The abstract operation AsyncGeneratorEnqueue takes arguments _generator_ and _completion_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: _completion_ is a Completion Record.
           1. Let _promiseCapability_ be ! NewPromiseCapability(%Promise%).
@@ -39446,6 +39547,7 @@ THH:mm:ss.sss
 
       <emu-clause id="sec-asyncgeneratoryield" aoid="AsyncGeneratorYield">
         <h1>AsyncGeneratorYield ( _value_ )</h1>
+        <p>The abstract operation AsyncGeneratorYield takes argument _value_. It performs the following steps:</p>
         <emu-alg>
           1. Let _genContext_ be the running execution context.
           1. Assert: _genContext_ is the execution context of a generator.
@@ -39618,6 +39720,7 @@ THH:mm:ss.sss
 
       <emu-clause id="sec-createresolvingfunctions" aoid="CreateResolvingFunctions">
         <h1>CreateResolvingFunctions ( _promise_ )</h1>
+        <p>The abstract operation CreateResolvingFunctions takes argument _promise_. It performs the following steps:</p>
         <emu-alg>
           1. Let _alreadyResolved_ be the Record { [[Value]]: *false* }.
           1. Let _stepsResolve_ be the algorithm steps defined in <emu-xref href="#sec-promise-resolve-functions" title></emu-xref>.
@@ -39679,6 +39782,7 @@ THH:mm:ss.sss
 
       <emu-clause id="sec-fulfillpromise" aoid="FulfillPromise">
         <h1>FulfillPromise ( _promise_, _value_ )</h1>
+        <p>The abstract operation FulfillPromise takes arguments _promise_ and _value_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: The value of _promise_.[[PromiseState]] is ~pending~.
           1. Let _reactions_ be _promise_.[[PromiseFulfillReactions]].
@@ -39740,6 +39844,7 @@ THH:mm:ss.sss
 
       <emu-clause id="sec-rejectpromise" aoid="RejectPromise">
         <h1>RejectPromise ( _promise_, _reason_ )</h1>
+        <p>The abstract operation RejectPromise takes arguments _promise_ and _reason_. It performs the following steps:</p>
         <emu-alg>
           1. Assert: The value of _promise_.[[PromiseState]] is ~pending~.
           1. Let _reactions_ be _promise_.[[PromiseRejectReactions]].
@@ -39823,6 +39928,7 @@ THH:mm:ss.sss
 
       <emu-clause id="sec-newpromiseresolvethenablejob" aoid="NewPromiseResolveThenableJob" oldids="sec-promiseresolvethenablejob">
         <h1>NewPromiseResolveThenableJob ( _promiseToResolve_, _thenable_, _then_ )</h1>
+        <p>The abstract operation NewPromiseResolveThenableJob takes arguments _promiseToResolve_, _thenable_, and _then_. It performs the following steps:</p>
         <emu-alg>
           1. Let _job_ be a new Job abstract closure with no parameters that captures _promiseToResolve_, _thenable_, and _then_ and performs the following steps when called:
             1. Let _resolvingFunctions_ be CreateResolvingFunctions(_promiseToResolve_).
@@ -39908,6 +40014,7 @@ THH:mm:ss.sss
 
         <emu-clause id="sec-performpromiseall" aoid="PerformPromiseAll">
           <h1>Runtime Semantics: PerformPromiseAll ( _iteratorRecord_, _constructor_, _resultCapability_ )</h1>
+          <p>The abstract operation PerformPromiseAll takes arguments _iteratorRecord_, _constructor_, and _resultCapability_. It performs the following steps:</p>
           <emu-alg>
             1. Assert: IsConstructor(_constructor_) is *true*.
             1. Assert: _resultCapability_ is a PromiseCapability Record.
@@ -39989,6 +40096,7 @@ THH:mm:ss.sss
 
         <emu-clause id="sec-performpromiseallsettled" aoid="PerformPromiseAllSettled">
           <h1>Runtime Semantics: PerformPromiseAllSettled ( _iteratorRecord_, _constructor_, _resultCapability_ )</h1>
+          <p>The abstract operation PerformPromiseAllSettled takes arguments _iteratorRecord_, _constructor_, and _resultCapability_. It performs the following steps:</p>
           <emu-alg>
             1. Assert: ! IsConstructor(_constructor_) is *true*.
             1. Assert: _resultCapability_ is a PromiseCapability Record.
@@ -40116,6 +40224,7 @@ THH:mm:ss.sss
 
         <emu-clause id="sec-performpromiserace" aoid="PerformPromiseRace">
           <h1>Runtime Semantics: PerformPromiseRace ( _iteratorRecord_, _constructor_, _resultCapability_ )</h1>
+          <p>The abstract operation PerformPromiseRace takes arguments _iteratorRecord_, _constructor_, and _resultCapability_. It performs the following steps:</p>
           <emu-alg>
             1. Assert: IsConstructor(_constructor_) is *true*.
             1. Assert: _resultCapability_ is a PromiseCapability Record.
@@ -40495,6 +40604,7 @@ THH:mm:ss.sss
 
       <emu-clause id="sec-async-functions-abstract-operations-async-function-start" aoid="AsyncFunctionStart">
         <h1>AsyncFunctionStart ( _promiseCapability_, _asyncFunctionBody_ )</h1>
+        <p>The abstract operation AsyncFunctionStart takes arguments _promiseCapability_ and _asyncFunctionBody_. It performs the following steps:</p>
         <emu-alg>
           1. Let _runningContext_ be the running execution context.
           1. Let _asyncContext_ be a copy of _runningContext_.
