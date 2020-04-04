@@ -10982,6 +10982,7 @@
           `return`
           `super` `switch`
           `this` `throw` `true` `try` `typeof`
+          `undefined`
           `var` `void`
           `while` `with`
           `yield`
@@ -11037,6 +11038,15 @@
 
   <emu-clause id="sec-ecmascript-language-lexical-grammar-literals">
     <h1>Literals</h1>
+
+    <emu-clause id="sec-undefined-literals">
+      <h1>Undefined Literals</h1>
+      <h2>Syntax</h2>
+      <emu-grammar type="definition">
+        UndefinedLiteral ::
+          `undefined`
+      </emu-grammar>
+    </emu-clause>
 
     <emu-clause id="sec-null-literals">
       <h1>Null Literals</h1>
@@ -12595,6 +12605,7 @@
       <h2>Syntax</h2>
       <emu-grammar type="definition">
         Literal :
+          UndefinedLiteral
           NullLiteral
           BooleanLiteral
           NumericLiteral
@@ -12603,6 +12614,10 @@
 
       <emu-clause id="sec-literals-runtime-semantics-evaluation">
         <h1>Runtime Semantics: Evaluation</h1>
+        <emu-grammar>Literal : UndefinedLiteral</emu-grammar>
+        <emu-alg>
+          1. Return *undefined*.
+        </emu-alg>
         <emu-grammar>Literal : NullLiteral</emu-grammar>
         <emu-alg>
           1. Return *null*.
@@ -24918,11 +24933,6 @@
     <emu-clause id="sec-value-properties-of-the-global-object-nan">
       <h1>NaN</h1>
       <p>The value of `NaN` is *NaN* (see <emu-xref href="#sec-ecmascript-language-types-number-type"></emu-xref>). This property has the attributes { [[Writable]]: *false*, [[Enumerable]]: *false*, [[Configurable]]: *false* }.</p>
-    </emu-clause>
-
-    <emu-clause id="sec-undefined">
-      <h1>undefined</h1>
-      <p>The value of `undefined` is *undefined* (see <emu-xref href="#sec-ecmascript-language-types-undefined-type"></emu-xref>). This property has the attributes { [[Writable]]: *false*, [[Enumerable]]: *false*, [[Configurable]]: *false* }.</p>
     </emu-clause>
   </emu-clause>
 
@@ -41649,6 +41659,7 @@ THH:mm:ss.sss
     <emu-prodref name="OtherPunctuator"></emu-prodref>
     <emu-prodref name="DivPunctuator"></emu-prodref>
     <emu-prodref name="RightBracePunctuator"></emu-prodref>
+    <emu-prodref name="UndefinedLiteral"></emu-prodref>
     <emu-prodref name="NullLiteral"></emu-prodref>
     <emu-prodref name="BooleanLiteral"></emu-prodref>
     <emu-prodref name="NumericLiteral"></emu-prodref>
